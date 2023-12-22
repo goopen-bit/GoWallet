@@ -1,17 +1,13 @@
 import PageHeader from '@/components/PageHeader'
 import RelayRegionPicker from '@/components/RelayRegionPicker'
 import SettingsStore from '@/store/SettingsStore'
-import { eip155Wallets } from '@/utils/EIP155WalletUtil'
-import { Card, Divider, Row, Switch, Text } from '@nextui-org/react'
+import { Divider, Row, Switch, Text } from '@nextui-org/react'
 import { Fragment } from 'react'
 import { useSnapshot } from 'valtio'
 import packageJSON from '../../package.json'
 
 export default function SettingsPage() {
-  const {
-    testNets,
-    eip155Address
-  } = useSnapshot(SettingsStore.state)
+  const { testNets } = useSnapshot(SettingsStore.state)
 
   return (
     <Fragment>
@@ -47,20 +43,6 @@ export default function SettingsPage() {
         </Text>
         <RelayRegionPicker />
       </Row>
-
-      <Divider y={2} />
-
-      <Text css={{ color: '$yellow500', marginBottom: '$5', textAlign: 'left', padding: 0 }}>
-        Warning: mnemonics and secret keys are provided for development purposes only and should not
-        be used elsewhere!
-      </Text>
-
-      <Text h4 css={{ marginTop: '$5', marginBottom: '$5' }}>
-        EIP155 Mnemonic
-      </Text>
-      <Card bordered borderWeight="light" css={{ minHeight: '100px' }}>
-        <Text css={{ fontFamily: '$mono' }}>{eip155Wallets[eip155Address].getMnemonic()}</Text>
-      </Card>
 
       <Text h4 css={{ marginTop: '$10', marginBottom: '$5' }}></Text>
     </Fragment>

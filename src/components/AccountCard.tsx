@@ -18,7 +18,7 @@ interface Props {
 
 export default function AccountCard({ name, logo, rgb, address = '', chainId }: Props) {
   const [copied, setCopied] = useState(false)
-  const { activeChainId, account } = useSnapshot(SettingsStore.state)
+  const { activeChainId } = useSnapshot(SettingsStore.state)
   function onCopy() {
     navigator?.clipboard?.writeText(address)
     setCopied(true)
@@ -57,7 +57,7 @@ export default function AccountCard({ name, logo, rgb, address = '', chainId }: 
           />
         </Button>
       </Tooltip>
-      <Button
+      {/* <Button
         size="sm"
         css={{
           minWidth: 'auto',
@@ -70,7 +70,7 @@ export default function AccountCard({ name, logo, rgb, address = '', chainId }: 
         }}
       >
         {activeChainId === chainId ? `✅` : `🔄`}
-      </Button>
+      </Button> */}
     </ChainCard>
   )
 }

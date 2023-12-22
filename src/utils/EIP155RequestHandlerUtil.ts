@@ -35,7 +35,7 @@ export async function approveEIP155Request(requestEvent: RequestEventArgs) {
         const { domain, types, message: data } = getSignTypedDataParamsData(request.params)
         // https://github.com/ethers-io/ethers.js/issues/687#issuecomment-714069471
         delete types.EIP712Domain
-        const signedData = await wallet._signTypedData(domain, types, data)
+        const signedData = await wallet.signTypedData(domain, types, data)
         return formatJsonRpcResult(id, signedData)
       } catch (error: any) {
         console.error(error)
@@ -47,8 +47,9 @@ export async function approveEIP155Request(requestEvent: RequestEventArgs) {
       try {
         const provider = new providers.JsonRpcProvider(EIP155_CHAINS[chainId as TEIP155Chain].rpc)
         const sendTransaction = request.params[0]
-        const connectedWallet = wallet.connect(provider)
-        const { hash } = await connectedWallet.sendTransaction(sendTransaction)
+        // const connectedWallet = wallet.connect(provider)
+        console.log('sendTransaction', wallet)
+        const { hash } = await wallet.sendTransaction(sendTransaction)
         return formatJsonRpcResult(id, hash)
       } catch (error: any) {
         console.error(error)

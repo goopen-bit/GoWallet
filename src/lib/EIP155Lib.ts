@@ -1,3 +1,6 @@
+import { Polygon } from '@thirdweb-dev/chains'
+import { ThirdwebSDK } from '@thirdweb-dev/sdk'
+import { ConnectParams, SmartWallet, SmartWalletConnectionArgs } from '@thirdweb-dev/wallets'
 import { providers, Wallet } from 'ethers'
 
 /**
@@ -11,43 +14,35 @@ interface IInitArgs {
  * Library
  */
 export default class EIP155Lib {
-  wallet: Wallet
+  wallet: SmartWallet
 
-  constructor(wallet: Wallet) {
+  constructor(wallet: SmartWallet) {
     this.wallet = wallet
   }
 
-  static init({ mnemonic }: IInitArgs) {
-    const wallet = mnemonic ? Wallet.fromMnemonic(mnemonic) : Wallet.createRandom()
-
-    return new EIP155Lib(wallet)
-  }
-
-  getMnemonic() {
-    return this.wallet.mnemonic.phrase
-  }
-
-  getPrivateKey() {
-    return this.wallet.privateKey
+  connect(connectOptions?: ConnectParams<SmartWalletConnectionArgs>) {
+    return this.wallet.connect(connectOptions)
   }
 
   getAddress() {
-    return this.wallet.address
+    return this.wallet.getAddress()
   }
 
   signMessage(message: string) {
     return this.wallet.signMessage(message)
   }
 
-  _signTypedData(domain: any, types: any, data: any) {
-    return this.wallet._signTypedData(domain, types, data)
+  async signTypedData(domain: any, types: any, data: any) {
+    const sdk = await ThirdwebSDK.fromWallet(this.wallet, Polygon)
+    return sdk.wallet.signTypedData(domain, types, data)
   }
 
-  connect(provider: providers.JsonRpcProvider) {
-    return this.wallet.connect(provider)
+  async signTransaction(transaction: providers.TransactionRequest) {
+    const signer = await this.wallet.getSigner()
+    return signer.signTransaction(transaction)
   }
 
-  signTransaction(transaction: providers.TransactionRequest) {
-    return this.wallet.signTransaction(transaction)
+  async sendTransaction(transaction: providers.TransactionRequest) {
+    return this.wallet.sendRaw(transaction)
   }
 }

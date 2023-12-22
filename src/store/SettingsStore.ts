@@ -6,7 +6,6 @@ import { proxy } from 'valtio'
  */
 interface State {
   testNets: boolean
-  account: number
   eip155Address: string
   relayerRegionURL: string
   activeChainId: string
@@ -18,7 +17,6 @@ interface State {
  */
 const state = proxy<State>({
   testNets: typeof localStorage !== 'undefined' ? Boolean(localStorage.getItem('TEST_NETS')) : true,
-  account: 0,
   activeChainId: '1',
   eip155Address: '',
   relayerRegionURL: ''
@@ -29,10 +27,6 @@ const state = proxy<State>({
  */
 const SettingsStore = {
   state,
-
-  setAccount(value: number) {
-    state.account = value
-  },
 
   setEIP155Address(eip155Address: string) {
     state.eip155Address = eip155Address
