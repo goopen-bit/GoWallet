@@ -1,14 +1,7 @@
 import { Polygon } from '@thirdweb-dev/chains'
 import { ThirdwebSDK } from '@thirdweb-dev/sdk'
 import { ConnectParams, SmartWallet, SmartWalletConnectionArgs } from '@thirdweb-dev/wallets'
-import { providers, Wallet } from 'ethers'
-
-/**
- * Types
- */
-interface IInitArgs {
-  mnemonic?: string
-}
+import { providers } from 'ethers'
 
 /**
  * Library

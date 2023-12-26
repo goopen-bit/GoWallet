@@ -8,7 +8,7 @@ import {
 import { formatJsonRpcError, formatJsonRpcResult } from '@json-rpc-tools/utils'
 import { SignClientTypes } from '@walletconnect/types'
 import { getSdkError } from '@walletconnect/utils'
-import { providers } from 'ethers'
+
 type RequestEventArgs = Omit<SignClientTypes.EventArguments['session_request'], 'verifyContext'>
 export async function approveEIP155Request(requestEvent: RequestEventArgs) {
   const { params, id } = requestEvent
@@ -36,7 +36,7 @@ export async function approveEIP155Request(requestEvent: RequestEventArgs) {
         // https://github.com/ethers-io/ethers.js/issues/687#issuecomment-714069471
         delete types.EIP712Domain
         const signedData = await wallet.signTypedData(domain, types, data)
-        return formatJsonRpcResult(id, signedData)
+        return formatJsonRpcResult(id, signedData.signature)
       } catch (error: any) {
         console.error(error)
         alert(error.message)
@@ -45,10 +45,9 @@ export async function approveEIP155Request(requestEvent: RequestEventArgs) {
 
     case EIP155_SIGNING_METHODS.ETH_SEND_TRANSACTION:
       try {
-        const provider = new providers.JsonRpcProvider(EIP155_CHAINS[chainId as TEIP155Chain].rpc)
+        // const provider = new providers.JsonRpcProvider(EIP155_CHAINS[chainId as TEIP155Chain].rpc)
         const sendTransaction = request.params[0]
         // const connectedWallet = wallet.connect(provider)
-        console.log('sendTransaction', wallet)
         const { hash } = await wallet.sendTransaction(sendTransaction)
         return formatJsonRpcResult(id, hash)
       } catch (error: any) {
