@@ -29,6 +29,14 @@ export const EIP155_MAINNET_CHAINS = {
     rpc: 'https://cloudflare-eth.com/',
     namespace: 'eip155'
   },
+  'eip155:56': {
+    chainId: 56,
+    name: 'Binance Smart Chain',
+    logo: '/chain-logos/eip155-56.png',
+    rgb: '130, 71, 229',
+    rpc: 'https://rpc.ankr.com/bsc/',
+    namespace: 'eip155'
+  },
   'eip155:43114': {
     chainId: 43114,
     name: 'Avalanche C-Chain',

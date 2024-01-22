@@ -1,4 +1,4 @@
-import { Chain, Ethereum, Mumbai, Polygon } from "@thirdweb-dev/chains";
+import { Binance, Chain, Ethereum, Mumbai, Polygon } from "@thirdweb-dev/chains";
 import { SmartWallet, EthersWallet } from "@thirdweb-dev/wallets";
 import { ethers } from 'ethers'
 
@@ -6,6 +6,8 @@ function getChainById(chainId: string): Chain {
   switch (chainId) {
     case '0x1':
       return Ethereum;
+    case '0x38':
+      return Binance;
     case '0x89':
       return Polygon;
     case '0x13881':
@@ -27,7 +29,7 @@ export async function getAndConnectSmartWallet(
   // TODO: to env
   const config = {
     chain: getChainById(chainId),
-    factoryAddress: "0x82Fa35517f0dB06C9831A8a3844216CB3B8878dF",
+    factoryAddress: "0x354cB3956f1afd85889aA8087Ab14f899D1dAFE3",
     clientId: '18076e906c89429c22578e210792fd3d',
     gasless: true, // enable or disable gasless transactions
   };

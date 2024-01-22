@@ -13,6 +13,13 @@ function initWeb3Modal() {
     explorerUrl: 'https://polygonscan.com',
     rpcUrl: 'https://polygon.llamarpc.com'
   }
+  const bsc = {
+    chainId: 56,
+    name: 'Binance Chain',
+    currency: 'BSC',
+    explorerUrl: 'https://bscscan.com',
+    rpcUrl: 'https://rpc.ankr.com/bsc'
+  }
 
   const metadata = {
     name: 'Moralis Wallet',
@@ -23,7 +30,7 @@ function initWeb3Modal() {
 
   const modal = createWeb3Modal({
     ethersConfig: defaultConfig({ metadata }),
-    chains: [polygon],
+    chains: [polygon, bsc],
     projectId: process.env.NEXT_PUBLIC_PROJECT_ID as string,
   })
 }
