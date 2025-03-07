@@ -19,7 +19,7 @@ export default function HomePage() {
       <PageHeader title="Accounts">
         <AccountPicker data-testid="account-picker" />
       </PageHeader>
-      <Text h4 css={{ marginBottom: '$5' }}>
+      {/* <Text h4 css={{ marginBottom: '$5' }}>
         Mainnets
       </Text>
       {Object.entries(EIP155_MAINNET_CHAINS).map(([caip10, { name, logo, rgb }]) => (
@@ -32,9 +32,9 @@ export default function HomePage() {
           chainId={caip10.toString()}
           data-testid={'chain-card-' + caip10.toString()}
         />
-      ))}
+      ))} */}
 
-      {testNets ? (
+      {/* {testNets ? ( */}
         <Fragment>
           <Text h4 css={{ marginBottom: '$5' }}>
             Testnets
@@ -53,7 +53,7 @@ export default function HomePage() {
             )
           })}
         </Fragment>
-      ) : null}
+      {/* ) : null} */}
     </Fragment>
   )
 }

@@ -9,7 +9,7 @@ import { Fragment } from 'react'
  * Utilities
  */
 const CHAIN_METADATA = {
-  ...EIP155_MAINNET_CHAINS,
+  // ...EIP155_MAINNET_CHAINS,
   ...EIP155_TEST_CHAINS,
 }
 

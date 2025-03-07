@@ -15,6 +15,7 @@ interface Props {
  * Container
  */
 export default function Layout({ children, initialized }: Props) {
+  initialized = true // TODO: Remove this line
   return (
     <Container
       display="flex"

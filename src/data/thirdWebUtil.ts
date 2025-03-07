@@ -1,17 +1,17 @@
-import { Binance, Chain, Ethereum, Mumbai, Polygon } from "@thirdweb-dev/chains";
+// import { Binance, Chain, Ethereum, Mumbai, Polygon } from "@thirdweb-dev/chains";
+import { ArbitrumSepolia, BaseSepoliaTestnet, Chain, Sepolia  } from "@thirdweb-dev/chains";
 import { SmartWallet, EthersWallet } from "@thirdweb-dev/wallets";
 import { ethers } from 'ethers'
 
 function getChainById(chainId: string): Chain {
+  console.log('chainId', chainId)
   switch (chainId) {
-    case '0x1':
-      return Ethereum;
-    case '0x38':
-      return Binance;
-    case '0x89':
-      return Polygon;
-    case '0x13881':
-      return Mumbai;
+    case '0xaa36a7':
+      return Sepolia;
+    case '0x14a34':
+      return BaseSepoliaTestnet;
+    case '0x66eee':
+      return ArbitrumSepolia;
     default:
       throw new Error(`Chain with id ${chainId} not supported`);
   }
@@ -29,8 +29,8 @@ export async function getAndConnectSmartWallet(
   // TODO: to env
   const config = {
     chain: getChainById(chainId),
-    factoryAddress: "0x354cB3956f1afd85889aA8087Ab14f899D1dAFE3",
-    clientId: '18076e906c89429c22578e210792fd3d',
+    factoryAddress: "0xf090b349e8dac9976f7a16018d1455309ef142e0",
+    clientId: '462c1089d53dea32288f614af4a9749d',
     gasless: true, // enable or disable gasless transactions
   };
   

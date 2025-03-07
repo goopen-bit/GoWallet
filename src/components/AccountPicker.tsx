@@ -5,16 +5,32 @@ import { toHex } from 'viem'
 import { getAndConnectSmartWallet } from '../data/thirdWebUtil'
 
 export default function AccountPicker() {
-  const polygon = {
-    chainId: 137,
-    name: 'Polygon',
-    currency: 'MATIC',
-    explorerUrl: 'https://polygonscan.com',
-    rpcUrl: 'https://polygon.llamarpc.com'
+  const sepolia = {
+    chainId: 11155111,
+    name: 'Sepolia',
+    currency: 'ETH',
+    explorerUrl: 'https://sepolia.com',
+    rpcUrl: 'https://sepolia.infura.io'
+  }
+
+  const baseSepolia = {
+    chainId: 84532,
+    name: 'Base Sepolia',
+    currency: 'ETH',
+    explorerUrl: 'https://base-sepolia.com',
+    rpcUrl: 'https://sepolia.base.org'
+  }
+
+  const arbitrumSepolia = {
+    chainId: 421614,
+    name: 'Arbitrum Sepolia',
+    currency: 'ETH',
+    explorerUrl: 'https://arbitrum-sepolia.com',
+    rpcUrl: 'https://sepolia-rollup.arbitrum.io/rpc'
   }
 
   const metadata = {
-    name: 'Moralis Wallet',
+    name: 'Go Wallet',
     description: 'Web3Modal Example',
     url: 'https://web3modal.com',
     icons: ['https://avatars.githubusercontent.com/u/37784886']
@@ -22,7 +38,7 @@ export default function AccountPicker() {
 
   const modal = createWeb3Modal({
     ethersConfig: defaultConfig({ metadata }),
-    chains: [polygon],
+    chains: [sepolia, baseSepolia, arbitrumSepolia],
     projectId: process.env.NEXT_PUBLIC_PROJECT_ID as string,
   })
 
