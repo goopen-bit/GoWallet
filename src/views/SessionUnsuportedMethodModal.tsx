@@ -1,4 +1,4 @@
-import { Button, Divider, Modal, Text } from '@nextui-org/react'
+import { Button, Divider, Modal, Text } from "@heroui/react"
 import { Fragment } from 'react'
 
 import ProjectInfoCard from '@/components/ProjectInfoCard'

@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { useSnapshot } from 'valtio'
-import { Image, StyledText } from '@nextui-org/react'
+import { Image, StyledText } from "@heroui/react"
 import SettingsStore from '@/store/SettingsStore'
 import ReportIcon from '@mui/icons-material/Report'
 import ReportProblemIcon from '@mui/icons-material/ReportProblem'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
-import { Avatar, Col, Link, Row, Text, styled } from '@nextui-org/react'
+import { Avatar, Col, Link, Row, Text, styled } from "@heroui/react"
 import { SignClientTypes } from '@walletconnect/types'
 
 /**

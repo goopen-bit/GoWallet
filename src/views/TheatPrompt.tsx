@@ -1,5 +1,5 @@
 import { Fragment, ReactNode, useMemo } from 'react'
-import { Col, Divider, Link, Row, Text, styled } from '@nextui-org/react'
+import { Col, Divider, Link, Row, Text, styled } from "@heroui/react"
 import { CoreTypes } from '@walletconnect/types'
 import NewReleasesIcon from '@mui/icons-material/NewReleases'
 

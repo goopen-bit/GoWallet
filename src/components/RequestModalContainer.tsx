@@ -1,4 +1,4 @@
-import { Container, Modal, Text } from '@nextui-org/react'
+import { Container, Modal, Text } from "@heroui/react"
 import { Fragment, ReactNode } from 'react'
 
 /**

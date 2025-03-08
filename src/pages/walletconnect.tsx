@@ -2,7 +2,7 @@ import { parseUri } from '@walletconnect/utils'
 import PageHeader from '@/components/PageHeader'
 import QrReader from '@/components/QrReader'
 import { web3wallet } from '@/utils/WalletConnectUtil'
-import { Button, Input, Loading, Text } from '@nextui-org/react'
+import { Button, Input, Loading, Text } from "@heroui/react"
 import { Fragment, useState } from 'react'
 import { styledToast } from '@/utils/HelperUtil'
 

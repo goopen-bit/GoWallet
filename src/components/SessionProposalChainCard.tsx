@@ -1,7 +1,7 @@
 import ChainCard from '@/components/ChainCard'
 import { EIP155_MAINNET_CHAINS, EIP155_TEST_CHAINS } from '@/data/EIP155Data'
 import { formatChainName } from '@/utils/HelperUtil'
-import { Col, Row, Text } from '@nextui-org/react'
+import { Col, Row, Text } from "@heroui/react"
 import { ProposalTypes } from '@walletconnect/types'
 import { Fragment } from 'react'
 

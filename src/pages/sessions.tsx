@@ -1,7 +1,7 @@
 import PageHeader from '@/components/PageHeader'
 import SessionCard from '@/components/SessionCard'
 import { web3wallet } from '@/utils/WalletConnectUtil'
-import { Text } from '@nextui-org/react'
+import { Text } from "@heroui/react"
 import { Fragment, useState } from 'react'
 
 export default function SessionsPage() {

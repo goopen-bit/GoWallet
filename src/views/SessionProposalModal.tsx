@@ -1,4 +1,4 @@
-import { Col, Divider, Grid, Row, Text, styled } from '@nextui-org/react'
+import { Col, Divider, Grid, Row, Text, styled } from "@heroui/react"
 import { Fragment, useCallback, useMemo } from 'react'
 import { buildApprovedNamespaces, getSdkError } from '@walletconnect/utils'
 

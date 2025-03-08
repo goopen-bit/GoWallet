@@ -3,7 +3,7 @@ import ProjectInfoCard from '@/components/ProjectInfoCard'
 import SessionChainCard from '@/components/SessionChainCard'
 import SettingsStore from '@/store/SettingsStore'
 import { web3wallet } from '@/utils/WalletConnectUtil'
-import { Button, Divider, Loading, Row, Text } from '@nextui-org/react'
+import { Button, Divider, Loading, Row, Text } from "@heroui/react"
 import { getSdkError } from '@walletconnect/utils'
 import { useRouter } from 'next/router'
 import { Fragment, useEffect, useState } from 'react'

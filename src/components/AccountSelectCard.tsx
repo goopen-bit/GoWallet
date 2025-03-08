@@ -1,5 +1,5 @@
 import { truncate } from '@/utils/HelperUtil'
-import { Card, Checkbox, Row, Text } from '@nextui-org/react'
+import { Card, Checkbox, Row, Text } from "@heroui/react"
 
 /**
  * Types

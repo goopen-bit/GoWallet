@@ -1,4 +1,4 @@
-import { Avatar, Row } from '@nextui-org/react'
+import { Avatar, Row } from "@heroui/react"
 import Image from 'next/image'
 import Link from 'next/link'
 

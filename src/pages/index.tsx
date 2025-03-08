@@ -3,7 +3,7 @@ import AccountPicker from '@/components/AccountPicker'
 import PageHeader from '@/components/PageHeader'
 import { EIP155_MAINNET_CHAINS, EIP155_TEST_CHAINS } from '@/data/EIP155Data'
 import SettingsStore from '@/store/SettingsStore'
-import { Text } from '@nextui-org/react'
+import { Text } from "@heroui/react"
 import { Fragment } from 'react'
 import { useSnapshot } from 'valtio'
 

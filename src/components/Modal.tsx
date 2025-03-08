@@ -4,7 +4,7 @@ import SessionSendTransactionModal from '@/views/SessionSendTransactionModal'
 import SessionRequestModal from '@/views/SessionSignModal'
 import SessionSignTypedDataModal from '@/views/SessionSignTypedDataModal'
 import SessionUnsuportedMethodModal from '@/views/SessionUnsuportedMethodModal'
-import { Modal as NextModal } from '@nextui-org/react'
+import { Modal as NextModal } from "@heroui/react"
 import { useSnapshot } from 'valtio'
 import { useCallback } from 'react'
 import AuthRequestModal from '@/views/AuthRequestModal'

@@ -1,5 +1,5 @@
 import { Fragment, ReactNode, useMemo, useState } from 'react'
-import { Divider, Text } from '@nextui-org/react'
+import { Divider, Text } from "@heroui/react"
 import { CoreTypes } from '@walletconnect/types'
 
 import ModalFooter from '@/components/ModalFooter'

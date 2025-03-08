@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 import { useSnapshot } from 'valtio'
-import { Col, Divider, Row, Text, Code } from '@nextui-org/react'
+import { Col, Divider, Row, Text, Code } from "@heroui/react"
 import { getSdkError } from '@walletconnect/utils'
 
 import ModalFooter from '@/components/ModalFooter'

@@ -1,4 +1,4 @@
-import { Col, Divider, Row, Text } from '@nextui-org/react'
+import { Col, Divider, Row, Text } from "@heroui/react"
 import { Fragment } from 'react'
 
 import ModalFooter from '@/components/ModalFooter'

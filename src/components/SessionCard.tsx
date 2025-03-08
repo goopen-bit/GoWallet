@@ -1,5 +1,5 @@
 import { truncate } from '@/utils/HelperUtil'
-import { Avatar, Card, Link, Text } from '@nextui-org/react'
+import { Avatar, Card, Link, Text } from "@heroui/react"
 import Image from 'next/image'
 import NextLink from 'next/link'
 

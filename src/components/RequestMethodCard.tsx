@@ -1,4 +1,4 @@
-import { Col, Row, Text } from '@nextui-org/react'
+import { Col, Row, Text } from "@heroui/react"
 
 /**
  * Types

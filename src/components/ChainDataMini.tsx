@@ -1,6 +1,6 @@
 import { EIP155_CHAINS } from '@/data/EIP155Data'
 import { getChainData } from '@/data/chainsUtil'
-import { Card, Row, styled, Image, Avatar } from '@nextui-org/react'
+import { Card, Row, styled, Image, Avatar } from "@heroui/react"
 import { ReactNode, useMemo } from 'react'
 
 interface Props {

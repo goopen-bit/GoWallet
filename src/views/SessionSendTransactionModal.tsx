@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react'
-import { Divider, Modal, Text } from '@nextui-org/react'
+import { Divider, Modal, Text } from "@heroui/react"
 
 import ModalFooter from '@/components/ModalFooter'
 import ProjectInfoCard from '@/components/ProjectInfoCard'

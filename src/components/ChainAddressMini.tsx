@@ -8,7 +8,7 @@ import { solanaAddresses } from '@/utils/SolanaWalletUtil'
 import { nearAddresses } from '@/utils/NearWalletUtil'
 import { kadenaAddresses } from '@/utils/KadenaWalletUtil'
 import { useMemo } from 'react'
-import { Row } from '@nextui-org/react'
+import { Row } from "@heroui/react"
 import { getChainData } from '@/data/chainsUtil'
 
 interface Props {

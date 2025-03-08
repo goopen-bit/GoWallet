@@ -1,4 +1,4 @@
-import { Button, Loading } from '@nextui-org/react'
+import { Button, Loading } from "@heroui/react"
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import { Fragment, useState } from 'react'

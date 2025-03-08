@@ -1,6 +1,6 @@
 import Navigation from '@/components/Navigation'
 import RouteTransition from '@/components/RouteTransition'
-import { Card, Container, Loading } from '@nextui-org/react'
+import { Card, Container, Loading } from "@heroui/react"
 import { Fragment, ReactNode } from 'react'
 
 /**

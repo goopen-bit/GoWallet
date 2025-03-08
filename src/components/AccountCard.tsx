@@ -3,7 +3,7 @@ import SettingsStore from '@/store/SettingsStore'
 import { eip155Addresses } from '@/utils/EIP155WalletUtil'
 import { truncate } from '@/utils/HelperUtil'
 import { updateSignClientChainId } from '@/utils/WalletConnectUtil'
-import { Avatar, Button, Text, Tooltip } from '@nextui-org/react'
+import { Avatar, Button, Text, Tooltip } from "@heroui/react"
 import Image from 'next/image'
 import { useState } from 'react'
 import { useSnapshot } from 'valtio'

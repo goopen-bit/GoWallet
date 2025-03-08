@@ -1,5 +1,5 @@
 import SettingsStore from '@/store/SettingsStore'
-import { Button, Modal, Row } from '@nextui-org/react'
+import { Button, Modal, Row } from "@heroui/react"
 import { useMemo } from 'react'
 import { useSnapshot } from 'valtio'
 

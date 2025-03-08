@@ -1,7 +1,7 @@
 import PageHeader from '@/components/PageHeader'
 import PairingCard from '@/components/PairingCard'
 import { web3wallet } from '@/utils/WalletConnectUtil'
-import { Text } from '@nextui-org/react'
+import { Text } from "@heroui/react"
 import { getSdkError } from '@walletconnect/utils'
 import { Fragment, useState } from 'react'
 

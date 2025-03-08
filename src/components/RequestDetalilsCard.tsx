@@ -1,5 +1,5 @@
 import { EIP155_CHAINS, TEIP155Chain } from '@/data/EIP155Data'
-import { Col, Divider, Row, Text } from '@nextui-org/react'
+import { Col, Divider, Row, Text } from "@heroui/react"
 import { Fragment } from 'react'
 
 /**
